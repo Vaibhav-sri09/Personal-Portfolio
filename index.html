@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaibhav Sri Sannidh | B.Tech Student - VIT Vellore</title>
+  <meta name="description" content="Personal portfolio of Vaibhav Sri Sannidh - First year B.Tech student at Vellore Institute of Technology (VIT), Vellore, learning C++, Python, foundational DSA, and exploring AI/ML.">
+  <meta name="keywords" content="Vaibhav Sri Sannidh, Portfolio, VIT Vellore, Engineering Student, B.Tech, C++, Python, Data Structures, Web Development">
+  <meta name="author" content="Vaibhav Sri Sannidh">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23080b12'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='42' fill='%2300f0ff'>VS</text></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ambient Background Lighting -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Vaibhav Sri Sannidh Home">
+        <span class="brand-bracket">&lt;</span>
+        <span class="brand-text">VSS</span>
+        <span class="brand-bracket">/&gt;</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-outline btn-sm nav-cta">Let's Connect</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul class="mobile-nav-list">
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#education" class="mobile-link">Education</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <div class="mobile-actions">
+      <a href="#contact" class="btn btn-primary w-full">Get In Touch</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <canvas id="heroCanvas" class="hero-canvas"></canvas>
+      <div class="container hero-content">
+        
+        <!-- College & Year Badge -->
+        <div class="status-pill animate-fade-in">
+          <span class="status-dot"></span>
+          <span class="status-text">First Year B.Tech &bull; VIT Vellore</span>
+        </div>
+
+        <h1 class="hero-title animate-fade-in-up">
+          Hi, I'm <span class="text-gradient">Vaibhav Sri Sannidh</span>
+        </h1>
+
+        <div class="typewriter-container animate-fade-in-up delay-1">
+          <span class="terminal-prefix">&gt;</span>
+          <span class="typewriter-text" id="typewriterText">First Year B.Tech Student</span>
+          <span class="cursor">|</span>
+        </div>
+
+        <p class="hero-description animate-fade-in-up delay-2">
+          First-year engineering undergraduate at <strong class="highlight">Vellore Institute of Technology (VIT), Vellore</strong>. 
+          Building a strong foundation in <strong class="highlight">C++</strong>, <strong class="highlight">Python</strong>, 
+          and core problem solving. Passionate about software development, studying data structures, and recently exploring foundational <strong class="highlight">AI/ML</strong> concepts.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-buttons animate-fade-in-up delay-3">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Projects</span>
+            <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Get in Touch</span>
+          </a>
+          <a href="https://github.com/Vaibhav-sri09" target="_blank" rel="noopener noreferrer" class="btn btn-icon-only" aria-label="Visit GitHub Profile">
+            <!-- GitHub SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/vaibhav-sri-sannidh-anasoori-595967413" target="_blank" rel="noopener noreferrer" class="btn btn-icon-only" aria-label="Visit LinkedIn Profile">
+            <!-- LinkedIn SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76c.97 0 1.76.79 1.76 1.76s-.79 1.76-1.76 1.76m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Metrics Highlights -->
+        <div class="hero-metrics animate-fade-in-up delay-4">
+          <div class="metric-card">
+            <span class="metric-value">VIT Vellore</span>
+            <span class="metric-label">B.Tech First Year</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-card">
+            <span class="metric-value">C++ &amp; Python</span>
+            <span class="metric-label">Student / Beginner Level</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-card">
+            <span class="metric-value">C++ STL</span>
+            <span class="metric-label">Core Containers</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-card">
+            <span class="metric-value">AI / ML</span>
+            <span class="metric-label">Recently Started Learning</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hero-scroll-indicator">
+        <a href="#about" aria-label="Scroll to About section">
+          <span class="mouse">
+            <span class="wheel"></span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">&lt;01. About Me/&gt;</div>
+          <h2 class="section-title">Background &amp; Learning Journey</h2>
+          <p class="section-subtitle">Dedicated first-year engineering student building solid foundations in code and problem solving.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Text Bio -->
+          <div class="about-text-column">
+            <div class="card glass-card">
+              <h3 class="card-heading">Engineering Student at VIT Vellore</h3>
+              <p class="paragraph">
+                I am a first-year <strong class="text-cyan">B.Tech student at Vellore Institute of Technology (VIT), Vellore</strong>. My primary focus is establishing strong fundamentals in programming, computer science, and practical software creation.
+              </p>
+              <p class="paragraph">
+                I code primarily in <strong class="text-cyan">C++</strong> and <strong class="text-cyan">Python</strong> at a student/beginner level. In C++, I have been actively studying the Standard Template Library (STL)—working with key structures like vectors, strings, stacks, queues, maps, unordered maps, sets, and multisets.
+              </p>
+              <p class="paragraph">
+                I am developing foundational knowledge in data structures and competitive programming techniques. I have also recently started learning the basics of Artificial Intelligence and Machine Learning, with a commitment to continuous, honest growth through hands-on projects.
+              </p>
+
+              <!-- Interest Highlights -->
+              <div class="interest-tags">
+                <span class="interest-pill">⚡ C++ Programming &amp; STL</span>
+                <span class="interest-pill">🐍 Python Scripting &amp; Logic</span>
+                <span class="interest-pill">🧩 Foundational DSA</span>
+                <span class="interest-pill">🤖 AI/ML (Recently Started)</span>
+                <span class="interest-pill">🌐 Web Development Basics</span>
+                <span class="interest-pill">🛠️ Hands-on Projects</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Code Card -->
+          <div class="about-code-column">
+            <div class="terminal-window">
+              <div class="terminal-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">vaibhav_profile.json</span>
+              </div>
+              <div class="terminal-body">
+                <pre class="code-block"><code><span class="code-punct">{</span>
+  <span class="code-key">"name"</span>: <span class="code-str">"Vaibhav Sri Sannidh"</span>,
+  <span class="code-key">"institution"</span>: <span class="code-str">"VIT Vellore"</span>,
+  <span class="code-key">"program"</span>: <span class="code-str">"B.Tech (First Year)"</span>,
+  <span class="code-key">"languages"</span>: [
+    <span class="code-str">"C++ (Basics &amp; STL)"</span>,
+    <span class="code-str">"Python (Student Level)"</span>,
+    <span class="code-str">"HTML/CSS &amp; Basic JavaScript"</span>
+  ],
+  <span class="code-key">"cpp_stl_topics"</span>: [
+    <span class="code-str">"vectors"</span>, <span class="code-str">"strings"</span>, <span class="code-str">"stacks"</span>,
+    <span class="code-str">"queues"</span>, <span class="code-str">"maps"</span>, <span class="code-str">"unordered maps"</span>,
+    <span class="code-str">"sets"</span>, <span class="code-str">"multisets"</span>
+  ],
+  <span class="code-key">"dsa_status"</span>: <span class="code-str">"Developing foundational knowledge"</span>,
+  <span class="code-key">"ai_ml_status"</span>: <span class="code-str">"Recently started learning"</span>,
+  <span class="code-key">"github"</span>: <span class="code-str">"github.com/Vaibhav-sri09"</span>
+<span class="code-punct">}</span></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">&lt;02. Capabilities/&gt;</div>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Accurate representation of my current studies, foundational coursework, and tools.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Card 1: Programming Languages -->
+          <div class="skill-category-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h3 class="skill-card-title">Languages</h3>
+            </div>
+            <p class="skill-card-desc">Core languages used for coursework, logic building, and personal projects.</p>
+            <div class="skill-badge-group">
+              <span class="skill-badge highlight-badge">C++ (Student / Beginner Level)</span>
+              <span class="skill-badge highlight-badge">Python (Student / Beginner Level)</span>
+              <span class="skill-badge">HTML5</span>
+              <span class="skill-badge">CSS3</span>
+              <span class="skill-badge">JavaScript (Basic Frontend)</span>
+            </div>
+          </div>
+
+          <!-- Card 2: C++ STL Studied -->
+          <div class="skill-category-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+              </div>
+              <h3 class="skill-card-title">C++ Standard Template Library</h3>
+            </div>
+            <p class="skill-card-desc">Containers and utility structures actively studied in C++.</p>
+            <div class="skill-badge-group">
+              <span class="skill-badge highlight-badge">Vectors</span>
+              <span class="skill-badge highlight-badge">Strings</span>
+              <span class="skill-badge highlight-badge">Stacks</span>
+              <span class="skill-badge highlight-badge">Queues</span>
+              <span class="skill-badge highlight-badge">Maps</span>
+              <span class="skill-badge highlight-badge">Unordered Maps</span>
+              <span class="skill-badge highlight-badge">Sets</span>
+              <span class="skill-badge highlight-badge">Multisets</span>
+            </div>
+          </div>
+
+          <!-- Card 3: DSA & Problem Solving -->
+          <div class="skill-category-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><line x1="6" y1="9" x2="6" y2="21"></line></svg>
+              </div>
+              <h3 class="skill-card-title">DSA &amp; Problem Solving</h3>
+            </div>
+            <p class="skill-card-desc">Developing foundational knowledge in data structures and algorithmic thinking.</p>
+            <div class="skill-badge-group">
+              <span class="skill-badge highlight-badge">Developing Foundational Knowledge</span>
+              <span class="skill-badge">Arrays &amp; Strings</span>
+              <span class="skill-badge">Linear Search &amp; Binary Search</span>
+              <span class="skill-badge">Basic Sorting Techniques</span>
+              <span class="skill-badge">Time &amp; Space Complexity Basics</span>
+              <span class="skill-badge">Algorithmic Problem Solving</span>
+            </div>
+          </div>
+
+          <!-- Card 4: AI/ML Exploration & Tools -->
+          <div class="skill-category-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1-4 4 4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z"></path><path d="M6 21v-2a6 6 0 0 1 12 0v2"></path><circle cx="12" cy="11" r="2"></circle><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <h3 class="skill-card-title">AI/ML &amp; Developer Tools</h3>
+            </div>
+            <p class="skill-card-desc">Recently started exploring AI/ML principles, along with daily developer tools.</p>
+            <div class="skill-badge-group">
+              <span class="skill-badge highlight-badge">AI/ML: Recently Started Learning</span>
+              <span class="skill-badge highlight-badge">Git &amp; GitHub</span>
+              <span class="skill-badge">VS Code</span>
+              <span class="skill-badge">Python Standard Library</span>
+              <span class="skill-badge">JSON Data Handling</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">&lt;03. Portfolio/&gt;</div>
+          <h2 class="section-title">Verified Projects</h2>
+          <p class="section-subtitle">Real, working projects accessible on my public GitHub profile with genuine implementation details.</p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- PROJECT 1: Autonomous Grid Explorer -->
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-type-badge">
+                <span class="pulse-indicator"></span>
+                <span>Python &bull; BFS Simulation</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Vaibhav-sri09/autonomous-grid-explorer" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub Repository for Autonomous Grid Explorer">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Graphic Visualization Preview -->
+            <div class="project-visualizer grid-visualizer">
+              <div class="grid-canvas-simulation" id="gridSimulationPreview">
+                <div class="sim-grid-node start-node" title="WALL-E Start">W</div>
+                <div class="sim-grid-node path-node"></div>
+                <div class="sim-grid-node wall-node"></div>
+                <div class="sim-grid-node path-node"></div>
+                <div class="sim-grid-node path-node"></div>
+                <div class="sim-grid-node target-node" title="Target EVE">E</div>
+              </div>
+              <div class="visualizer-overlay">
+                <span class="overlay-badge">5×5 Grid &bull; BFS &amp; Distance Clues</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">WALL-E and EVE's Signal (Autonomous Grid Explorer)</h3>
+              <p class="project-description">
+                A Python-based autonomous robot simulation built for the VinnovateIT technical club selection. A robot (WALL-E) searches for a hidden target (EVE) on a 5×5 grid using distance clues, avoids obstacles, finds shortest paths using BFS, and manages battery levels to return safely to charging.
+              </p>
+
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▸</span>
+                  <span><strong>Smart Search:</strong> Narrows down target locations using Manhattan distance elimination</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▸</span>
+                  <span><strong>BFS Pathfinding:</strong> Computes shortest paths around obstacles with standard library queues</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▸</span>
+                  <span><strong>Battery Management:</strong> Evaluates remaining power to guarantee a safe return to base</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▸</span>
+                  <span><strong>Testing &amp; Logging:</strong> Includes built-in self-tests and automatic JSON action logs</span>
+                </div>
+              </div>
+
+              <div class="tech-tag-list">
+                <span class="tech-tag">Python 3</span>
+                <span class="tech-tag">BFS Pathfinding</span>
+                <span class="tech-tag">Queues &amp; Sets</span>
+                <span class="tech-tag">JSON Logging</span>
+                <span class="tech-tag">Self-Testing</span>
+              </div>
+
+              <div class="project-footer">
+                <button class="btn btn-outline btn-sm open-modal-btn" data-modal="modal-grid-explorer">
+                  <span>View Project Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </button>
+                <a href="https://github.com/Vaibhav-sri09/autonomous-grid-explorer" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+                  <span>GitHub Repository ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: EventFlow API -->
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-type-badge">
+                <span class="pulse-indicator"></span>
+                <span>Full-Stack &bull; Python / Flask</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Vaibhav-sri09/EventFlow-API" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub Repository for EventFlow API">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Graphic Simulation Preview -->
+            <div class="project-visualizer terminal-visualizer">
+              <div class="airport-radar-preview">
+                <div class="radar-circle"></div>
+                <div class="radar-sweep"></div>
+                <div class="flight-blip blip-1">JWT AUTH [VALID]</div>
+                <div class="flight-blip blip-2">21 TESTS [PASSED]</div>
+              </div>
+              <div class="visualizer-overlay">
+                <span class="overlay-badge">REST API &bull; Role-Based Access &bull; Concurrency Safe</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">EventFlow API</h3>
+              <p class="project-description">
+                A multi-resource event registration system and REST API built with Python, Flask, and SQLite. Features user authentication with hashed passwords, JWT access/refresh tokens, role-based access for admins and members, and concurrency-safe event registration.
+              </p>
+
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▸</span>
+                  <span><strong>Authentication:</strong> Secure password hashing and JWT token refresh flow</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▸</span>
+                  <span><strong>Concurrency Safety:</strong> SQLite transactions &amp; atomic conditional updates prevent overbooking</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▸</span>
+                  <span><strong>Role-Based Access:</strong> Granular permissions separating member actions and admin controls</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▸</span>
+                  <span><strong>Automated Testing:</strong> 21 automated pytest unit and integration tests</span>
+                </div>
+              </div>
+
+              <div class="tech-tag-list">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">JWT</span>
+                <span class="tech-tag">Pytest (21 Tests)</span>
+                <span class="tech-tag">HTML/CSS/JS</span>
+              </div>
+
+              <div class="project-footer">
+                <button class="btn btn-outline btn-sm open-modal-btn" data-modal="modal-eventflow">
+                  <span>View Project Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </button>
+                <a href="https://github.com/Vaibhav-sri09/EventFlow-API" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+                  <span>GitHub Repository ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: SkillSwap -->
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-type-badge">
+                <span class="pulse-indicator"></span>
+                <span>Web App &bull; Flask &amp; Frontend</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Vaibhav-sri09/SkillSwap" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub Repository for SkillSwap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Graphic Visualizer -->
+            <div class="project-visualizer">
+              <div class="grid-canvas-simulation">
+                <div class="sim-grid-node start-node" title="Learn Skill">L</div>
+                <div class="sim-grid-node path-node"></div>
+                <div class="sim-grid-node path-node"></div>
+                <div class="sim-grid-node target-node" title="Teach Skill">T</div>
+              </div>
+              <div class="visualizer-overlay">
+                <span class="overlay-badge">Student Skill-Sharing &bull; Peer Matching</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">SkillSwap</h3>
+              <p class="project-description">
+                A student-focused platform built as a college project to connect students who want to teach skills they know with peers who want to learn them. Built with HTML, CSS, JavaScript, and a Flask/SQLite backend.
+              </p>
+
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▸</span>
+                  <span><strong>Student Profiles:</strong> Manage teaching and learning skill lists</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▸</span>
+                  <span><strong>Search &amp; Match:</strong> Find peers with complementary skills</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▸</span>
+                  <span><strong>Connection Requests:</strong> Send, accept, or reject peer connections</span>
+                </div>
+              </div>
+
+              <div class="tech-tag-list">
+                <span class="tech-tag">HTML5 / CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">SQLite</span>
+              </div>
+
+              <div class="project-footer">
+                <a href="https://github.com/Vaibhav-sri09/SkillSwap" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <span>View on GitHub ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">&lt;04. Academics/&gt;</div>
+          <h2 class="section-title">Education</h2>
+          <p class="section-subtitle">Current academic enrollment and foundational engineering program.</p>
+        </div>
+
+        <div class="education-timeline">
+          <!-- 1. B.Tech — Vellore Institute of Technology (VIT) -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-badge">Undergraduate Degree</span>
+                  <h3 class="education-degree">B.Tech</h3>
+                  <h4 class="education-school">Vellore Institute of Technology (VIT)</h4>
+                  <div class="education-location">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Vellore, Tamil Nadu, India</span>
+                  </div>
+                </div>
+                <div class="timeline-period">First-Year Student</div>
+              </div>
+              <p class="education-meta">
+                <strong>Current Status:</strong> First-year student pursuing foundational engineering and computer science studies.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. Class 12 — Sri Chaitanya Junior Kalasala -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-badge">Intermediate / Senior Secondary</span>
+                  <h3 class="education-degree">Class 12</h3>
+                  <h4 class="education-school">Sri Chaitanya Junior Kalasala</h4>
+                  <div class="education-location">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Hyderabad, Telangana, India</span>
+                  </div>
+                </div>
+                <div class="education-score-pill">
+                  <span>Percentage:</span>
+                  <strong>98.3%</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Class 10 — Vasant Valley -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-badge">Secondary School</span>
+                  <h3 class="education-degree">Class 10</h3>
+                  <h4 class="education-school">Vasant Valley</h4>
+                  <div class="education-location">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Karimnagar, Telangana, India</span>
+                  </div>
+                </div>
+                <div class="education-score-pill">
+                  <span>Percentage:</span>
+                  <strong>97%</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">&lt;05. Connect/&gt;</div>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Reach out for academic collaborations, technical club projects, or student discussions.</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Info & Quick Actions -->
+          <div class="contact-info-panel">
+            <div class="card glass-card h-full">
+              <h3 class="card-heading">Let's Connect</h3>
+              <p class="paragraph">
+                Feel free to contact me via email or connect with me on LinkedIn and GitHub. I am always eager to learn, collaborate on projects, and discuss software development!
+              </p>
+
+              <div class="contact-methods">
+                
+                <!-- Email Item -->
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div class="contact-details">
+                    <span class="contact-label">Email</span>
+                    <a href="mailto:vaibhavsrisannidhanasoori@gmail.com" class="contact-value" id="emailLink">vaibhavsrisannidhanasoori@gmail.com</a>
+                  </div>
+                  <button class="copy-btn" id="copyEmailBtn" title="Copy Email to Clipboard" aria-label="Copy email address">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  </button>
+                </div>
+
+                <!-- Phone Item -->
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  </div>
+                  <div class="contact-details">
+                    <span class="contact-label">Mobile Number</span>
+                    <a href="tel:9948210031" class="contact-value" id="phoneLink">9948210031</a>
+                  </div>
+                  <a href="tel:9948210031" class="ext-btn" title="Call 9948210031" aria-label="Call 9948210031">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  </a>
+                  <button class="copy-btn" id="copyPhoneBtn" title="Copy Phone Number" aria-label="Copy phone number">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  </button>
+                </div>
+
+                <!-- GitHub Item -->
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                  </div>
+                  <div class="contact-details">
+                    <span class="contact-label">GitHub</span>
+                    <a href="https://github.com/Vaibhav-sri09" target="_blank" rel="noopener noreferrer" class="contact-value">github.com/Vaibhav-sri09</a>
+                  </div>
+                  <a href="https://github.com/Vaibhav-sri09" target="_blank" rel="noopener noreferrer" class="ext-btn" aria-label="Visit GitHub Profile">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+
+                <!-- LinkedIn Item -->
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76c.97 0 1.76.79 1.76 1.76s-.79 1.76-1.76 1.76m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+                  </div>
+                  <div class="contact-details">
+                    <span class="contact-label">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/vaibhav-sri-sannidh-anasoori-595967413" target="_blank" rel="noopener noreferrer" class="contact-value">Vaibhav Sri Sannidh Anasoori</a>
+                  </div>
+                  <a href="https://www.linkedin.com/in/vaibhav-sri-sannidh-anasoori-595967413" target="_blank" rel="noopener noreferrer" class="ext-btn" aria-label="Visit LinkedIn Profile">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+
+                <!-- Location Item -->
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div class="contact-details">
+                    <span class="contact-label">Location</span>
+                    <span class="contact-value">Vellore, Tamil Nadu, India</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Message Form -->
+          <div class="contact-form-panel">
+            <div class="card glass-card">
+              <h3 class="card-heading">Prepare an Email</h3>
+              <p class="paragraph" style="font-size: 0.88rem; margin-bottom: 1rem; color: var(--text-muted);">
+                <strong style="color: var(--cyan-primary);">Note:</strong> This is a static portfolio site without an active email server or database. Submitting this form prepares a pre-filled direct email draft via your default mail client addressed to <span class="highlight">vaibhavsrisannidhanasoori@gmail.com</span>.
+              </p>
+              
+              <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-group">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="e.g. John Doe" required>
+                  <span class="form-error" id="nameError">Please enter your name.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="form-label">Your Email</label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="e.g. john@example.com" required>
+                  <span class="form-error" id="emailError">Please enter a valid email address.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Inquiry / Discussion" required>
+                  <span class="form-error" id="subjectError">Please specify a subject.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea id="message" name="message" rows="4" class="form-input" placeholder="Write your message here..." required></textarea>
+                  <span class="form-error" id="messageError">Please provide your message.</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-full" id="submitBtn">
+                  <span>Open Email Client Draft</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </button>
+              </form>
+
+              <!-- Honest Informational Alert -->
+              <div class="form-success-alert" id="formSuccessAlert" style="display: none;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <div>
+                  <strong>Email Draft Created!</strong>
+                  <p>Your mail application was triggered with your message addressed to <code>vaibhavsrisannidhanasoori@gmail.com</code>. (No data is saved on external servers).</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="#hero" class="footer-brand">
+          <span class="brand-bracket">&lt;</span>
+          <span class="brand-text">Vaibhav Sri Sannidh</span>
+          <span class="brand-bracket">/&gt;</span>
+        </a>
+        <p class="footer-tagline">B.Tech First Year &bull; VIT Vellore</p>
+      </div>
+
+      <div class="footer-center">
+        <p class="footer-copy">&copy; <span id="currentYear"></span> Vaibhav Sri Sannidh.</p>
+      </div>
+
+      <div class="footer-right">
+        <a href="https://github.com/Vaibhav-sri09" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/vaibhav-sri-sannidh-anasoori-595967413" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76c.97 0 1.76.79 1.76 1.76s-.79 1.76-1.76 1.76m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+        </a>
+        <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL 1: Autonomous Grid Explorer Architecture -->
+  <div class="modal-backdrop" id="modal-grid-explorer">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-badge">Python Simulation &bull; Club Selection Project</span>
+          <h3 class="modal-title">WALL-E and EVE's Signal (Autonomous Grid Explorer)</h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">
+          An autonomous robot simulation developed for the VinnovateIT technical club selection. In a 5×5 discrete grid world, WALL-E receives distance clues to eliminate impossible target coordinates, uses BFS to find shortest obstacle-free routes, and monitors battery consumption.
+        </p>
+
+        <h4 class="modal-subheading">Verified Technical Implementation:</h4>
+        <ul class="modal-list">
+          <li><strong>Smart Search:</strong> Narrows down candidate coordinates using Manhattan distance calculations against received clues.</li>
+          <li><strong>Breadth-First Search (BFS):</strong> Explores cardinal neighbors to calculate shortest paths around static obstacles.</li>
+          <li><strong>Battery-Aware Logic:</strong> Evaluates step cost to the charging station before committing to further exploration.</li>
+          <li><strong>Encapsulation:</strong> Separates environment state from agent perception so the agent cannot cheat.</li>
+          <li><strong>Logging &amp; Testing:</strong> Generates <code>action_log.json</code> and <code>final_report.json</code>, with built-in <code>--test</code> flags.</li>
+        </ul>
+
+        <h4 class="modal-subheading">Repository Link:</h4>
+        <p class="modal-note">
+          Official repository on GitHub:
+          <br>
+          <a href="https://github.com/Vaibhav-sri09/autonomous-grid-explorer" target="_blank" rel="noopener noreferrer" class="link-cyan">
+            https://github.com/Vaibhav-sri09/autonomous-grid-explorer ↗
+          </a>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-close-btn-footer">Close</button>
+        <a href="https://github.com/Vaibhav-sri09/autonomous-grid-explorer" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: EventFlow API Deep Dive -->
+  <div class="modal-backdrop" id="modal-eventflow">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-badge">Full-Stack &bull; REST API &amp; Concurrency</span>
+          <h3 class="modal-title">EventFlow API</h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">
+          A multi-resource event registration system and REST API built with Python, Flask, and SQLite. Solves concurrency challenges in seat reservation and secures endpoints with JSON Web Tokens.
+        </p>
+
+        <h4 class="modal-subheading">Verified Technical Implementation:</h4>
+        <ul class="modal-list">
+          <li><strong>Concurrency Safety:</strong> Employs SQLite transactions and atomic conditional updates to prevent race conditions and overbooking.</li>
+          <li><strong>JWT Authentication:</strong> Secure password hashing with access token generation and refresh token handling.</li>
+          <li><strong>Role-Based Access Control:</strong> Strict permission checks separating standard members from administrative managers.</li>
+          <li><strong>Search &amp; Pagination:</strong> Modular query filtering to browse events efficiently page by page.</li>
+          <li><strong>Automated Testing:</strong> 21 automated tests using pytest validating authentication, permissions, and registration flows.</li>
+        </ul>
+
+        <h4 class="modal-subheading">Repository Link:</h4>
+        <p class="modal-note">
+          Official repository on GitHub:
+          <br>
+          <a href="https://github.com/Vaibhav-sri09/EventFlow-API" target="_blank" rel="noopener noreferrer" class="link-cyan">
+            https://github.com/Vaibhav-sri09/EventFlow-API ↗
+          </a>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-close-btn-footer">Close</button>
+        <a href="https://github.com/Vaibhav-sri09/EventFlow-API" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
